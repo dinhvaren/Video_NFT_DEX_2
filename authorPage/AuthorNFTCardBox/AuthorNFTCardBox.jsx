@@ -77,27 +77,27 @@ const AuthorNFTCardBox = ({
 
   const followingArray = [
     {
-      background: images.creatorbackground3,
+      background: images.nft_image_1,
       user: images.user3,
       seller: "d84ff74hf99999f9974hf774f99f",
     },
     {
-      background: images.creatorbackground4,
+      background: images.nft_image_2,
       user: images.user4,
       seller: "d84ff74hf99999f9974hf774f99f",
     },
     {
-      background: images.creatorbackground5,
+      background: images.nft_image_3,
       user: images.user5,
       seller: "d84ff74hf99999f9974hf774f99f",
     },
     {
-      background: images.creatorbackground6,
+      background: images.nft_image_4,
       user: images.user6,
       seller: "d84ff74hf99999f9974hf774f99f",
     },
     {
-      background: images.creatorbackground1,
+      background: images.nft_image_5,
       user: images.user1,
       seller: "d84ff74hf99999f9974hf774f99f",
     },

@@ -62,7 +62,7 @@ const NFTDetailsImg = ({ nft }) => {
               src={nft.image}
               className={Style.NFTDetailsImg_box_NFT_img_img}
               alt="NFT image"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
