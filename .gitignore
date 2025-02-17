@@ -1,0 +1,5 @@
+.env
+HARDHAT_SetUp.txt
+.env.local
+node_modules
+.next
