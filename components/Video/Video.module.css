@@ -33,10 +33,14 @@
 .Video_box_frame_left{
     grid-column: 1 /8;
     grid-row: 1 / -1;
+    z-index: 3; /* Đặt video lên trên các phần tử khác */
 }
 
 .Video_box_frame_left_img{
     border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    z-index: 2;
 }
 
 .Video_box_frame_right{
@@ -47,7 +51,11 @@
     padding:  3rem 0;
     margin-top: -5rem;
     box-shadow: var(--box-shadow);
+    z-index: 1;
 }
+.Video_box_frame_left video::-webkit-media-controls {
+    display: none !important;
+  }
 
 @media screen and (max-width: 35em) {
     .Video_box{

@@ -19,6 +19,9 @@ import {
   Video,
   Loader,
 } from "../components/componentsindex";
+import {
+  NFTCardTwo
+} from "../collectionPage/collectionIndex";
 import { getTopCreators } from "../TopCreators/TopCreators";
 
 //IMPORTING CONTRCT DATA
@@ -61,12 +64,11 @@ const Home = () => {
         paragraph="Discover the most outstanding NFTs in all topics of life."
       />
       <AudioLive />
-      {creators.length == 0 ? (
+      {/* {creators.length == 0 ? (
         <Loader />
-      ) : (
+      ) : */ ( 
         <FollowerTab TopCreator={creators} />
       )}
-
       <Slider />
       <Collection />
       <Title
@@ -75,7 +77,6 @@ const Home = () => {
       />
       <Filter />
       {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
-
       <Title
         heading="Browse by category"
         paragraph="Explore the NFTs in the most featured categories."

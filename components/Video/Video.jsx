@@ -19,14 +19,17 @@ const Video = () => {
 
         <div className={Style.Video_box_frame}>
           <div className={Style.Video_box_frame_left}>
-            <Image
-              src={images.NFTVideo}
-              alt="Video image"
-              width={1920}
-              height={1080}
-              objectFit="cover"
+            <video controls
+              width="100%"
+              height="100%"
               className={Style.Video_box_frame_left_img}
-            />
+              style={{ objectFit: "cover" }}
+              autoPlay
+              muted
+              loop>
+              <source src="/video/video2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div className={Style.Video_box_frame_right}>Hey</div>

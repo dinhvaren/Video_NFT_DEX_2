@@ -2,7 +2,7 @@
   {
     "creatorName": "Yua Mikami",
     "nftImage": "nft-image-1.png",
-    "userImage": "user-1.png",
+    "userImage": "user-1.jpg",
     "accountAddress": "0x829BD824B016326A401d083B33D092293333A830",
     "creatorId": "1",
     "intro": "Punk #4786 / An OG Cryptopunk Collector, hoarder of NFTs. Contributing to @ether_cards, an NFT Monetization Platform.",
@@ -11,7 +11,7 @@
         "type": "image",
         "like": 342,
         "nftImage": "nft-image-2.png",
-        "likeProfile": ["user-1.png", "user-2.png", "user-4.png", "user-3.png"],
+        "likeProfile": ["user-1.jpg", "user-2.jpg", "user-4.jpg", "user-3.jpg"],
         "nftName": "Ape Monkey",
         "nftId": 1,
         "nftPrice": 2.0,
@@ -21,7 +21,7 @@
         "type": "image",
         "like": 342,
         "nftImage": "nft-image-1.png",
-        "likeProfile": ["user-5.png", "user-6.png", "user-7.png", "user-8.png"],
+        "likeProfile": ["user-5.jpg", "user-6.jpg", "user-7.png", "user-8.png"],
         "nftName": "Funny Monkey",
         "nftId": 2,
         "nftPrice": 3.0,
@@ -30,12 +30,12 @@
       {
         "type": "image",
         "like": 32,
-        "nftImage": "nft-image-3.png",
+        "nftImage": "nft-image-3.jpg",
         "likeProfile": [
           "user-9.png",
           "user-10.png",
-          "user-1.png",
-          "user-2.png"
+          "user-1.jpg",
+          "user-2.jpg"
         ],
         "nftName": "Hey Monkey",
         "nftId": 3,
@@ -46,7 +46,7 @@
         "type": "image",
         "like": 12,
         "nftImage": "nft-image-1.png",
-        "likeProfile": ["user-3.png", "user-1.png", "user-4.png", "user-5.png"],
+        "likeProfile": ["user-3.jpg", "user-1.jpg", "user-4.jpg", "user-5.jpg"],
         "nftName": "Hey Monkey",
         "nftId": 4,
         "nftPrice": 3.0,
@@ -55,8 +55,8 @@
       {
         "type": "image",
         "like": 442,
-        "nftImage": "nft-image-3.png",
-        "likeProfile": ["user-6.png", "user-7.png", "user-8.png", "user-9.png"],
+        "nftImage": "nft-image-3.jpg",
+        "likeProfile": ["user-6.jpg", "user-7.png", "user-8.png", "user-9.png"],
         "nftName": "Kon Monkey",
         "nftId": 5,
         "nftPrice": 7.0,
@@ -68,7 +68,7 @@
         "type": "image",
         "nftImage": "nft-image-1.png",
         "like": 342,
-        "likeProfile": ["user-1.png", "user-2.png", "user-4.png", "user-3.png"],
+        "likeProfile": ["user-1.jpg", "user-2.jpg", "user-4.jpg", "user-3.jpg"],
         "nftName": "Ape Monkey",
         "nftId": 1,
         "nftPrice": 2.0,
@@ -77,8 +77,8 @@
       {
         "type": "image",
         "like": 342,
-        "nftImage": "nft-image-3.png",
-        "likeProfile": ["user-5.png", "user-6.png", "user-7.png", "user-8.png"],
+        "nftImage": "nft-image-3.jpg",
+        "likeProfile": ["user-5.jpg", "user-6.jpg", "user-7.png", "user-8.png"],
         "nftName": "Funny Monkey",
         "nftId": 2,
         "nftPrice": 3.0,
@@ -91,8 +91,8 @@
         "likeProfile": [
           "user-9.png",
           "user-10.png",
-          "user-1.png",
-          "user-2.png"
+          "user-1.jpg",
+          "user-2.jpg"
         ],
         "nftName": "Hey Monkey",
         "nftId": 3,
@@ -103,7 +103,7 @@
         "type": "image",
         "like": 12,
         "nftImage": "nft-image-2.png",
-        "likeProfile": ["user-3.png", "user-1.png", "user-4.png", "user-5.png"],
+        "likeProfile": ["user-3.jpg", "user-1.jpg", "user-4.jpg", "user-5.jpg"],
         "nftName": "Hey Monkey",
         "nftId": 4,
         "nftPrice": 3.0,
@@ -112,8 +112,8 @@
       {
         "type": "image",
         "like": 442,
-        "nftImage": "nft-image-3.png",
-        "likeProfile": ["user-6.png", "user-7.png", "user-8.png", "user-9.png"],
+        "nftImage": "nft-image-3.jpg",
+        "likeProfile": ["user-6.jpg", "user-7.png", "user-8.png", "user-9.png"],
         "nftName": "Kon Monkey",
         "nftId": 5,
         "nftPrice": 7.0,
@@ -125,7 +125,7 @@
         "type": "image",
         "nftImage": "nft-image-1.png",
         "like": 342,
-        "likeProfile": ["user-1.png", "user-2.png", "user-4.png", "user-3.png"],
+        "likeProfile": ["user-1.jpg", "user-2.jpg", "user-4.jpg", "user-3.jpg"],
         "nftName": "Ape Monkey",
         "nftId": 1,
         "nftPrice": 2.0,
@@ -134,8 +134,8 @@
       {
         "type": "image",
         "like": 342,
-        "nftImage": "nft-image-3.png",
-        "likeProfile": ["user-5.png", "user-6.png", "user-7.png", "user-8.png"],
+        "nftImage": "nft-image-3.jpg",
+        "likeProfile": ["user-5.jpg", "user-6.jpg", "user-7.png", "user-8.png"],
         "nftName": "Funny Monkey",
         "nftId": 2,
         "nftPrice": 3.0,
@@ -148,8 +148,8 @@
         "likeProfile": [
           "user-9.png",
           "user-10.png",
-          "user-1.png",
-          "user-2.png"
+          "user-1.jpg",
+          "user-2.jpg"
         ],
         "nftName": "Hey Monkey",
         "nftId": 3,
@@ -160,13 +160,13 @@
     "followers": [
       {
         "name": "Tsukasa Aoi",
-        "userImage": "user-1.png",
+        "userImage": "user-1.jpg",
         "description": " Cryptopunk Collector, hoarder of NFTs. Contributing to @ether_cards, an NFT Monetization Platform",
         "bool": true
       },
       {
         "name": "Himari Hanazawa",
-        "userImage": "user-2.png",
+        "userImage": "user-2.jpg",
         "description": "@ether_cards, an NFT Monetization Platform Cryptopunk Collector, hoarder of NFTs. Contributing to",
         "bool": true
       }
@@ -174,13 +174,13 @@
     "following": [
       {
         "name": "Hashimoto Arina",
-        "userImage": "user-3.png",
+        "userImage": "user-3.jpg",
         "description": " Cryptopunk Collector, hoarder of NFTs. Contributing to @ether_cards, an NFT Monetization Platform",
         "bool": true
       },
       {
         "name": "Shinoda Yu",
-        "userImage": "user-5.png",
+        "userImage": "user-5.jpg",
         "description": "@ether_cards, an NFT Monetization Platform Cryptopunk Collector, hoarder of NFTs. Contributing to",
         "bool": true
       },

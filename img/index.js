@@ -10,12 +10,12 @@ import creatorbackground8 from "./creatorbackground-8.jpg";
 import creatorbackground9 from "./creatorbackground-9.jpg";
 import creatorbackground10 from "./creatorbackground-10.jpg";
 import creatorbackground11 from "./creatorbackground-11.jpg";
-import user1 from "./user-1.jpg";
-import user2 from "./user-2.jpg";
-import user3 from "./user-3.jpg";
-import user4 from "./user-4.jpg";
-import user5 from "./user-5.jpg";
-import user6 from "./user-6.jpg";
+import user1 from "./user-1.png";
+import user2 from "./user-2.png";
+import user3 from "./user-3.png";
+import user4 from "./user-4.png";
+import user5 from "./user-5.png";
+import user6 from "./user-6.png";
 import user7 from "./user-7.png";
 import user8 from "./user-8.png";
 import user9 from "./user-9.png";
@@ -34,11 +34,11 @@ import vimeo from "./vimeo.svg";
 import vector from "./VectorHIW.svg";
 import zgcmq from "./zgcmq.svg";
 import hero from "./hero.png";
-import nft_1 from "./nft_1.jpg";
+import nft_1 from "./nft_1.png";
 import getAble from "./getable.png";
-import nft_image_1 from "./nft-image-1.jpg";
-import nft_image_2 from "./nft-image-2.jpg";
-import nft_image_3 from "./nft-image-3.jpg";
+import nft_image_1 from "./nft-image-1.png";
+import nft_image_2 from "./nft-image-2.png";
+import nft_image_3 from "./nft-image-3.png";
 import musiceWave from "./musicwave.png";
 import update from "./update.png";
 import earn from "./eran.png";
@@ -57,13 +57,11 @@ import loader from "./loadergif.gif";
 import errorgif from "./error.gif";
 import transfer from "./transfer.gif";
 import transferEther from "./ethereTransfer.gif";
-import music_1 from "./music-1.jpeg";
-import audiocard_1 from "./audiocard-1.jpg";
-import nft_video_1 from "./nft-video-1.jpg";
-import nft_video_2 from "./nft-video-2.jpg";
-import nft_video_3 from "./nft-video-3.jpg";
-import nft_video_4 from "./nft-video-4.jpg";
-import nft_video_5 from "./nft-video-5.jpg";
+import audiocard from "./AudioNFTcard.jpg";
+import nftdex from "./nftdex.jpg"
+import nftmusic from "./nftmusic.png";
+import backgroundmp3 from "./backgroundmp3.jpg";
+
 
 export default {
   hero2,
@@ -125,11 +123,8 @@ export default {
   errorgif,
   transfer,
   transferEther,
-  music_1,
-  audiocard_1,
-  nft_video_1,
-  nft_video_2,
-  nft_video_3,
-  nft_video_4,
-  nft_video_5,
+  audiocard,
+  nftdex,
+  nftmusic,
+  backgroundmp3
 };

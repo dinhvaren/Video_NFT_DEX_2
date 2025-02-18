@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { TbPlayerPlay, TbPlayerPause } from "react-icons/tb";
@@ -11,6 +11,7 @@ import LikeProfile from "../../LikeProfile/LikeProfile";
 const AudioCard = () => {
   const [like, setLike] = useState(false);
   const [play, setPlay] = useState(false);
+  const audioRef = useRef(null); 
 
   const likeNft = () => {
     if (!like) {
@@ -21,10 +22,14 @@ const AudioCard = () => {
   };
 
   const playMusic = () => {
-    if (!play) {
-      setPlay(true);
-    } else {
-      setPlay(false);
+    if (audioRef.current) {
+      if (!play) {
+        audioRef.current.play();
+        setPlay(true);
+      } else {
+        audioRef.current.pause();
+        setPlay(false);
+      }
     }
   };
   return (
@@ -71,7 +76,7 @@ const AudioCard = () => {
 
         <div className={Style.audioCard_box_details}>
           <div className={Style.audioCard_box_details_info}>
-            <h4>NFT music #1123</h4>
+            <h4>NFT music</h4>
             <div className={Style.audioCard_box_details_info_price}>
               <small>Price</small>
               <p>$3,221.33</p>
@@ -86,13 +91,14 @@ const AudioCard = () => {
 
         <div className={Style.audioCard_box_img}>
           <Image
-            src={images.audiocard_1}
+            src={images.backgroundmp3}
             alt="background"
             width={500}
             height={500}
           />
         </div>
       </div>
+      <audio ref={audioRef} src="/music/song5.mp3" onEnded={() => setPlay(false)} />
     </div>
   );
 };
