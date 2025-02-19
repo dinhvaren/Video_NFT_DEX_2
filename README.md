@@ -25,7 +25,7 @@
 - **Smart Contract**: Solidity, OpenZeppelin, Hardhat  
 - **Blockchain**: Polygon, Optimism  
 - **Frontend**: Next.js, React.js, Tailwind CSS  
-- **Backend**: Node.js, Express.js, MongoDB  
+- **Backend**: Node.js, Express.js, MongoDB  (tương lai sẽ kết hợp)
 - **Lưu trữ**: IPFS (Pinata)  
 - **Ví**: Web3.js, Ethers.js  
 
