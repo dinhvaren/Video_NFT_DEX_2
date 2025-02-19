@@ -26,12 +26,12 @@ const Form = () => {
           </div>
 
           <div className={Style.Form_box_input}>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" placeholder="">Email</label>
             <div className={Style.Form_box_input_box}>
               <div className={Style.Form_box_input_box_icon}>
                 <HiOutlineMail />
               </div>
-              <input type="text" placeholder="Email*" />
+              <input type="text" placeholder="example@domain.com" />
             </div>
           </div>
 
@@ -53,7 +53,7 @@ const Form = () => {
                 <MdOutlineHttp />
               </div>
 
-              <input type="text" placeholder="website" />
+              <input type="text" placeholder="https://www.example.com/" />
             </div>
           </div>
 
@@ -64,7 +64,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialFacebook />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="https://www.facebook.com/dvr.official.2203" />
               </div>
             </div>
             <div className={Style.Form_box_input}>
@@ -73,7 +73,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialTwitter />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="https://x.com/dvr.official.2203" />
               </div>
             </div>
             <div className={Style.Form_box_input}>
@@ -82,7 +82,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialInstagram />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="https://www.instagram.com/dvr.official.2203" />
               </div>
             </div>
           </div>

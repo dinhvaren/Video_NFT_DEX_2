@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import { useRouter } from "next/router";
 import axios from "axios";
 
-//INTERNAL  IMPORT
+// Import địa chỉ và ABI của smart contract từ file constants
 import {
   NFTMarketplaceAddress,
   NFTMarketplaceABI,
@@ -13,13 +13,14 @@ import {
   handleNetworkSwitch,
 } from "./constants";
 
+// Lấy thông tin API của Pinata từ biến môi trường
 const PINATA_API_KEY = process.env.NEXT_PUBLIC_PINATA_API_KEY;
 const PINATA_SECRECT_KEY = process.env.NEXT_PUBLIC_PINATA_SECRECT_KEY;
 const PINATA_POST_URL = process.env.NEXT_PUBLIC_PINATA_POST_URL;
 const PINATA_HASH_URL = process.env.NEXT_PUBLIC_PINATA_HASH_URL;
 const PINATA_POST_JSON_URL = process.env.NEXT_PUBLIC_PINATA_POST_JSON_URL;
 
-//---FETCHING SMART CONTRACT
+// Kết nối với smart contract bằng cách tạo một đối tượng ethers.Contract
 const fetchContract = (signerOrProvider) =>
   new ethers.Contract(
     NFTMarketplaceAddress,
@@ -27,8 +28,7 @@ const fetchContract = (signerOrProvider) =>
     signerOrProvider
   );
 
-//---CONNECTING WITH SMART CONTRACT
-
+// Kết nối với smart contract thông qua Web3Modal
 const connectingWithSmartContract = async () => {
   try {
     const web3Modal = new Web3Modal();
@@ -43,25 +43,25 @@ const connectingWithSmartContract = async () => {
   }
 };
 
+// Tạo Context cho ứng dụng NFT Marketplace
 export const NFTMarketplaceContext = React.createContext();
 
 export const NFTMarketplaceProvider = ({ children }) => {
   const titleData = "Discover, collect, and sell NFTs";
 
-  //------USESTAT
+// State quản lý lỗi và tài khoản người dùng
   const [error, setError] = useState("");
   const [openError, setOpenError] = useState(false);
   const [currentAccount, setCurrentAccount] = useState("");
   const [accountBalance, setAccountBalance] = useState("");
   const router = useRouter();
 
-  //---CHECK IF WALLET IS CONNECTD
-
+// Kiểm tra xem ví có được kết nối hay không
   const checkIfWalletConnected = async () => {
     try {
       if (!window.ethereum)
         return setOpenError(true), setError("Install MetaMask");
-      const network = await handleNetworkSwitch();
+      const network = await handleNetworkSwitch(); // Kiểm tra và chuyển mạng nếu cần
 
       const accounts = await window.ethereum.request({
         method: "eth_accounts",
@@ -86,7 +86,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  //---CONNET WALLET FUNCTION
+  // Kết nối với ví MetaMask
   const connectWallet = async () => {
     try {
       if (!window.ethereum)
@@ -106,7 +106,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  //---UPLOAD TO IPFS FUNCTION
+// Tải tệp lên Pinata IPFS
   const uploadToPinata = async (file) => {
     if (file) {
       try {
@@ -136,7 +136,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
     setOpenError(true);
   };
 
-  //---CREATENFT FUNCTION
+  // Tạo NFT và tải dữ liệu lên IPFS
   const createNFT = async (name, price, image, description, router) => {
     if (!name || !description || !price || !image)
       return setError("Data Is Missing"), setOpenError(true);
@@ -166,7 +166,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  //--- createSale FUNCTION
+// Tạo sale NFT trên marketplace
   const createSale = async (url, formInputPrice, isReselling, id) => {
     try {
       const price = ethers.utils.parseUnits(formInputPrice, "ether");
@@ -192,9 +192,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  //--FETCHNFTS FUNCTION
-
-  const fetchNFTs = async () => {
+// Lấy danh sách NFT có sẵn trên marketplace
+const fetchNFTs = async () => {
     try {
       const address = await checkIfWalletConnected();
       if (address) {
@@ -246,7 +245,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  //--FETCHING MY NFT OR LISTED NFTs
+// Lấy danh sách NFT của người dùng hoặc NFT đã niêm yết
   const fetchMyNFTsOrListedNFTs = async (type) => {
     try {
       const address = await checkIfWalletConnected();
@@ -292,7 +291,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  //---BUY NFTs FUNCTION
+// hàm mua NFTs
   const buyNFT = async (nft) => {
     try {
       const address = await checkIfWalletConnected();

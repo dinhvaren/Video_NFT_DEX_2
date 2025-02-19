@@ -1,17 +1,17 @@
 import nftMarketplace from "./NFTMarketplace.json";
 
+// Lấy địa chỉ hợp đồng và mạng blockchain từ biến môi trường
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 const NETWORK = process.env.NEXT_PUBLIC_NETWORK;
 
-//NFT MARKETPLACE
-//--------POLYGON AMOY TESTNET
+//địa chỉ hợp đồng và ABI của hợp đồng NFT Marketplace
 export const NFTMarketplaceAddress = CONTRACT_ADDRESS;
 export const NFTMarketplaceABI = nftMarketplace.abi;
 
-//NETWORK
+// Định nghĩa các mạng blockchain được hỗ trợ
 const networks = {
   polygon_amoy: {
-    chainId: "0x13882", // 80002 in hex
+    chainId: "0x13882", // Mã hex của chuỗi Polygon Amoy (80002)
     chainName: "Polygon Amoy",
     nativeCurrency: {
       name: "POL",
@@ -22,7 +22,7 @@ const networks = {
     blockExplorerUrls: ["https://amoy.polygonscan.com/"],
   },
   polygon: {
-    chainId: "0x89", // 137 in hex
+    chainId: "0x89", // Mã hex của chuỗi Polygon Mainnet (137)
     chainName: "Polygon Mainnet",
     nativeCurrency: {
       name: "MATIC",
@@ -33,7 +33,7 @@ const networks = {
     blockExplorerUrls: ["https://polygonscan.com/"],
   },
   localhost: {
-    chainId: `0x${Number(1337).toString(16)}`,
+    chainId: `0x${Number(1337).toString(16)}`,  // Mã hex của mạng cục bộ (1337)
     chainName: "localhost",
     nativeCurrency: {
       name: "GO",
@@ -45,6 +45,7 @@ const networks = {
   },
 };
 
+// Hàm thay đổi mạng trên MetaMask
 const changeNetwork = async ({ networkName }) => {
   try {
     if (!window.ethereum) throw new Error("No crypto wallet found");
@@ -52,6 +53,7 @@ const changeNetwork = async ({ networkName }) => {
       method: "wallet_addEthereumChain",
       params: [
         {
+          // Lấy thông tin mạng từ danh sách networks
           ...networks[networkName],
         },
       ],
@@ -61,6 +63,7 @@ const changeNetwork = async ({ networkName }) => {
   }
 };
 
+// Hàm kiểm tra và chuyển đổi mạng blockchain dựa trên biến môi trường
 export const handleNetworkSwitch = async () => {
   const networkName = NETWORK;
   await changeNetwork({ networkName });

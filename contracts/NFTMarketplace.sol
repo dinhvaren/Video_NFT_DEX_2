@@ -12,8 +12,8 @@ contract NFTMarketplace is ERC721URIStorage {
     Counters.Counter private _tokenIds;
     Counters.Counter private _itemsSold;
 
-    uint256 listingPrice = 0.000001 ether;
-    address payable owner;
+    uint256 listingPrice = 0.000001 ether; // Giá niêm yết cho mỗi NFT trên marketplace
+    address payable owner; // Chủ sở hữu marketplace
 
     mapping(uint256 => MarketItem) private idToMarketItem;
 
@@ -45,7 +45,7 @@ contract NFTMarketplace is ERC721URIStorage {
         owner = payable(msg.sender);
     }
 
-    /* Updates the listing price of the contract */
+    /* Cập nhật giá niêm yết cho mỗi NFT */
     function updateListingPrice(uint256 _listingPrice)
         public
         payable
@@ -58,12 +58,12 @@ contract NFTMarketplace is ERC721URIStorage {
         listingPrice = _listingPrice;
     }
 
-    /* Returns the listing price of the contract */
+    /* Trả về giá niêm yết hiện tại */
     function getListingPrice() public view returns (uint256) {
         return listingPrice;
     }
 
-    /* Mints a token and lists it in the marketplace */
+    /* Tạo (mint) một NFT mới và niêm yết nó trên marketplace */
     function createToken(string memory tokenURI, uint256 price)
         public
         payable
@@ -78,6 +78,7 @@ contract NFTMarketplace is ERC721URIStorage {
         return newTokenId;
     }
 
+    /* Thêm một NFT vào marketplace với thông tin chi tiết */
     function createMarketItem(uint256 tokenId, uint256 price) private {
         require(price > 0, "Price must be at least 1 wei");
         require(
@@ -103,7 +104,7 @@ contract NFTMarketplace is ERC721URIStorage {
         );
     }
 
-    /* allows someone to resell a token they have purchased */
+    /* Cho phép người sở hữu NFT niêm yết lại NFT của họ để bán */
     function resellToken(uint256 tokenId, uint256 price) public payable {
         require(
             idToMarketItem[tokenId].owner == msg.sender,
@@ -122,8 +123,8 @@ contract NFTMarketplace is ERC721URIStorage {
         _transfer(msg.sender, address(this), tokenId);
     }
 
-    /* Creates the sale of a marketplace item */
-    /* Transfers ownership of the item, as well as funds between parties */
+    /* Mua NFT từ marketplace */
+    /* Chuyển giao quyền sở hữu vật phẩm cũng như tiền giữa các bên */
     function createMarketSale(uint256 tokenId) public payable {
         uint256 price = idToMarketItem[tokenId].price;
         require(
@@ -139,7 +140,7 @@ contract NFTMarketplace is ERC721URIStorage {
         idToMarketItem[tokenId].seller = payable(address(0));
     }
 
-    /* Returns all unsold market items */
+    /* Lấy danh sách tất cả các NFT chưa bán trên marketplace */
     function fetchMarketItems() public view returns (MarketItem[] memory) {
         uint256 itemCount = _tokenIds.current();
         uint256 unsoldItemCount = _tokenIds.current() - _itemsSold.current();
@@ -157,7 +158,7 @@ contract NFTMarketplace is ERC721URIStorage {
         return items;
     }
 
-    /* Returns only items that a user has purchased */
+    /* Lấy danh sách các NFT mà người dùng đã mua */
     function fetchMyNFTs() public view returns (MarketItem[] memory) {
         uint256 totalItemCount = _tokenIds.current();
         uint256 itemCount = 0;
@@ -181,7 +182,7 @@ contract NFTMarketplace is ERC721URIStorage {
         return items;
     }
 
-    /* Returns only items a user has listed */
+    /* Lấy danh sách các NFT mà người dùng đã niêm yết để bán */
     function fetchItemsListed() public view returns (MarketItem[] memory) {
         uint256 totalItemCount = _tokenIds.current();
         uint256 itemCount = 0;

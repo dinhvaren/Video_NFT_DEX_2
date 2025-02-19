@@ -1,15 +1,19 @@
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 
-//INTERNAL IMPORT
 import Style from "../styles/connectWallet.module.css";
 import images from "../img";
 
-//IMPORT FROM SMART CONTRACT
+// Import context để truy xuất dữ liệu từ smart contract
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 const connectWallet = () => {
+  // State để theo dõi nút ví nào đang được chọn
   const [activeBtn, setActiveBtn] = useState(1);
+
+  // Lấy dữ liệu từ context của smart contract
   const { currentAccount, connectWallet } = useContext(NFTMarketplaceContext);
+
+  // Danh sách các nhà cung cấp ví mà người dùng có thể kết nối
   const providerArray = [
     {
       provider: images.provider1,
@@ -35,15 +39,17 @@ const connectWallet = () => {
         <p className={Style.connectWallet_box_para}>
           Connect with one of our avaliabl wallet providers or create a new one
         </p>
-
+        {/* Danh sách các nhà cung cấp ví */}
         <div className={Style.connectWallet_box_provider}>
           {providerArray.map((el, i) => (
             <div
-              className={`${Style.connectWallet_box_provider_item} ${
-                activeBtn == i + 1 ? Style.active : ""
-              }`}
+              className={`${Style.connectWallet_box_provider_item} ${activeBtn == i + 1 ? Style.active : ""
+                }`}
               key={i + 1}
-              onClick={() => (setActiveBtn(i + 1), connectWallet())}
+              onClick={() => (
+                setActiveBtn(i + 1), // Cập nhật state để đánh dấu ví được chọn
+                connectWallet() // Gọi hàm kết nối ví
+              )}
             >
               <Image
                 src={el.provider}

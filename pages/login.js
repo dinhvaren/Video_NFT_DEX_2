@@ -8,8 +8,11 @@ const login = () => {
   return (
     <div className={Style.login}>
       <div className={Style.login_box}>
+        {/* Tiêu đề trang đăng nhập */}
         <h1>Login</h1>
+        {/* Component xử lý đăng nhập và đăng ký */}
         <LoginAndSignUp />
+        {/* Liên kết chuyển hướng đến trang đăng ký nếu chưa có tài khoản */}
         <p className={Style.login_box_para}>
           New user? <a href="#">Create an account</a>
         </p>
