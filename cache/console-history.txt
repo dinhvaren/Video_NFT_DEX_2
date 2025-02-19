@@ -1,0 +1,2 @@
+consconsole.log(ethers.utils.formatEther(balance));
+const [deployer] = await ethers.getSigners();

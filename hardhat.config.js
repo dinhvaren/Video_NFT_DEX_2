@@ -9,11 +9,15 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
-    holesky: {
-      url: process.env.HOLESKY_URL || process.env.HOLESKY_URL_OPTIONAL,
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      chainId: 17000,
+    polygon: {
+      url: process.env.POLYGON_URL || process.env.POLYGON_URL_OPTIONAL,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 137, // Mainnet
+    },
+    polygon_amoy: {
+      url: process.env.AMOY_URL || process.env.AMOY_URL_OPTIONAL,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 80002, // testnet
     },
   },
   paths: {

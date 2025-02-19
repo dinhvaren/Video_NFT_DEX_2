@@ -10,19 +10,8 @@ export const NFTMarketplaceABI = nftMarketplace.abi;
 
 //NETWORK
 const networks = {
-  holesky: {
-    chainId: `0x${Number(17000).toString(16)}`,
-    chainName: "Holesky",
-    nativeCurrency: {
-      name: "ETH",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    rpcUrls: ["https://rpc.ankr.com/eth_holesky"],
-    blockExplorerUrls: ["https://holesky.etherscan.io/"],
-  },
   polygon_amoy: {
-    chainId: `0x${Number(80002).toString(16)}`,
+    chainId: "0x13882", // 80002 in hex
     chainName: "Polygon Amoy",
     nativeCurrency: {
       name: "MATIC",
@@ -30,51 +19,18 @@ const networks = {
       decimals: 18,
     },
     rpcUrls: ["https://rpc-amoy.polygon.technology/"],
-    blockExplorerUrls: ["https://www.oklink.com/amoy"],
+    blockExplorerUrls: ["https://amoy.polygonscan.com/"],
   },
   polygon: {
-    chainId: `0x${Number(137).toString(16)}`,
+    chainId: "0x89", // 137 in hex
     chainName: "Polygon Mainnet",
     nativeCurrency: {
       name: "MATIC",
       symbol: "MATIC",
       decimals: 18,
     },
-    rpcUrls: ["https://rpc.ankr.com/polygon"],
+    rpcUrls: ["https://polygon-rpc.com/", "https://rpc.ankr.com/polygon"],
     blockExplorerUrls: ["https://polygonscan.com/"],
-  },
-  bsc: {
-    chainId: `0x${Number(56).toString(16)}`,
-    chainName: "Binance Smart Chain Mainnet",
-    nativeCurrency: {
-      name: "Binance Chain Native Token",
-      symbol: "BNB",
-      decimals: 18,
-    },
-    rpcUrls: ["https://rpc.ankr.com/bsc"],
-    blockExplorerUrls: ["https://bscscan.com"],
-  },
-  base_mainnet: {
-    chainId: `0x${Number(8453).toString(16)}`,
-    chainName: "Base Mainnet",
-    nativeCurrency: {
-      name: "ETH",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    rpcUrls: ["https://mainnet.base.org/"],
-    blockExplorerUrls: ["https://bscscan.com"],
-  },
-  base_sepolia: {
-    chainId: `0x${Number(84532).toString(16)}`,
-    chainName: "Base Sepolia",
-    nativeCurrency: {
-      name: "ETH",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    rpcUrls: ["https://sepolia.base.org"],
-    blockExplorerUrls: ["https://bscscan.com"],
   },
   localhost: {
     chainId: `0x${Number(1337).toString(16)}`,
