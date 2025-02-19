@@ -9,7 +9,9 @@ const signUp = () => {
     <div className={Style.login}>
       <div className={Style.login_box}>
         <h1>SignUp</h1>
+        {/* Form đăng nhập và đăng ký */}
         <LoginAndSignUp />
+        {/* Liên kết để tạo tài khoản mới nếu chưa có */}
         <p className={Style.login_box_para}>
           New user? <a href="#">Create an account</a>
         </p>

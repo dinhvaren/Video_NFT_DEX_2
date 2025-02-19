@@ -8,6 +8,7 @@ import { UploadNFT } from "../UploadNFT/uploadNFTIndex";
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const uploadNFT = () => {
+  // Lấy các hàm cần thiết từ context của NFT Marketplace
   const { uploadToIPFS, createNFT, uploadToPinata } = useContext(
     NFTMarketplaceContext
   );
@@ -21,7 +22,7 @@ const uploadNFT = () => {
             manage other personal settings.
           </p>
         </div>
-
+        {/* Thông tin về loại file hỗ trợ */}
         <div className={Style.uploadNFT_box_title}>
           <h2>Image, Video, Audio, or 3D Model</h2>
           <p>
@@ -29,7 +30,7 @@ const uploadNFT = () => {
             GLB, GLTF. Max size: 100 MB
           </p>
         </div>
-
+        {/* Form upload NFT */}
         <div className={Style.uploadNFT_box_form}>
           <UploadNFT
             uploadToIPFS={uploadToIPFS}
