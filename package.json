@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "clear": "rm -rf node_modules package-lock.json .next cache artifacts",
-    "deploy": "hardhat run scripts/deploy.js --network polygon_amoy",
+    "deploy": "hardhat run scripts/deploy.js --network polygon",
+    "deploy-test": "hardhat run scripts/deploy.js --network polygon_amoy",
     "deploy-local": "hardhat run scripts/deploy.js --network localhost",
     "node": "hardhat node"
   },
