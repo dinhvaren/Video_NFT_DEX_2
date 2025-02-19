@@ -3,7 +3,7 @@
 ##  🎥 Video NFT DEX – Sàn Giao Dịch Phi Tập Trung Cho NFT Video 🚀  
 
 ![Video NFT DEX](https://cryptoviet.info/_next/image?url=https%3A%2F%2Fadmin.cryptoviet.info%2Fuploads%2FCelestia_la_gi_64878a024f.jpg&w=3840&q=100)  
-## 📌 Video NFT DEX là một sàn giao dịch phi tập trung (DEX) cho phép người dùng mint, mua, bán và giao dịch NFT video một cách an toàn, minh bạch và không cần trung gian trên blockchain. Dự án này sử dụng smart contract, IPFS và công nghệ Web3 để xây dựng một hệ sinh thái NFT video thực sự phi tập trung.  
+# 📌 Video NFT DEX là một sàn giao dịch phi tập trung (DEX) cho phép người dùng mint, mua, bán và giao dịch NFT video một cách an toàn, minh bạch và không cần trung gian trên blockchain. Dự án này sử dụng smart contract, IPFS và công nghệ Web3 để xây dựng một hệ sinh thái NFT video thực sự phi tập trung.  
 
 ## 💡 Tại sao chọn Video NFT DEX?  
 - Nền tảng chuyên biệt cho NFT Video – Được thiết kế riêng cho nội dung video.  
