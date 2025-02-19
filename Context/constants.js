@@ -10,6 +10,17 @@ export const NFTMarketplaceABI = nftMarketplace.abi;
 
 // Định nghĩa các mạng blockchain được hỗ trợ
 const networks = {
+  optimism_sepolia: {
+    chainId: "0x45", // Mã hex của chuỗi Optimism Sepolia (69)
+    chainName: "Optimism Sepolia",
+    nativeCurrency: {
+      name: "ETH",
+      symbol: "ETH",
+      decimals: 18
+    },
+    rpcUrls: ["https://sepolia.optimism.io"],
+    blockExplorerUrls: ["https://sepolia-optimism.etherscan.io"]
+},
   polygon_amoy: {
     chainId: "0x13882", // Mã hex của chuỗi Polygon Amoy (80002)
     chainName: "Polygon Amoy",
